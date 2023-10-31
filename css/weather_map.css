@@ -1,12 +1,23 @@
 #map {
     width: 75%;
-    height: 600px;
+    height: 700px;
     float: right;
     border: 2px solid dodgerblue;
 }
 
-.card {
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 10px;
+#results {
+    /*position: absolute;*/
+    top: 50%;
+    left: 50%;
+    display: flex;
+    height: 300px;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    flex-wrap: wrap;
+    cursor: pointer;
+    /*border-radius: $border-radius;*/
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
 }
+
+
+
