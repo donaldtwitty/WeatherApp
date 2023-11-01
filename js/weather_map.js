@@ -72,9 +72,9 @@ function makeHTML(data) {
 <div class="text-center">
     <div><img src="${iconUrl}"</div>
     <div>${dayOfWeek}</div>
-    <div>Temperature: ${data.list[i].main.temp} &#x2109;</div>
-    <div>Condition: ${data.list[0].weather[0].description}</div>
-    <div>Humidity: ${data.list[i].main.humidity}%</div>
+    <div><h1>${data.list[i].main.temp} &#x2109;</h1></div>
+    <div><p>${data.list[0].weather[0].description}</p></div>
+    <div>${data.list[i].main.humidity}% Humidity</div>
     </div>
     `
     }

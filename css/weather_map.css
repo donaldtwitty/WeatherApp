@@ -1,3 +1,7 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 #map {
     width: 75%;
     height: 700px;
@@ -8,6 +12,15 @@
 .text-center {
     width: 25rem;
 }
+
+h1 {
+    font-size: 20px;
+}
+
+p:first-letter {
+    text-transform: uppercase;
+}
+
 
 
 
