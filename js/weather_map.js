@@ -83,7 +83,6 @@ function makeHTML(data) {
     </div>
     </div>
     `
-
     }
     return html
 }
