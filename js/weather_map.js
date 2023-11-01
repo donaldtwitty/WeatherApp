@@ -61,7 +61,9 @@ function fiveDay(coords) {
 function makeHTML(data) {
     let html = `
 
-<h3 class="text-center">${data.city.name}</h3>`
+<div class="container">
+<h1 class="text-center">${data.city.name}</h1>`
+
     for (let i = 0; i < data.list.length; i += 8) {
         const iconUrl = `http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png`;
         const temp = `${data.list[i].main.temp}&#x2109;`;
@@ -69,14 +71,19 @@ function makeHTML(data) {
         const humidity = `${data.list[i].main.humidity}%`;
         const dayOfWeek = new Date(data.list[i].dt * 1000).toLocaleDateString('en-US', {weekday: 'long'});
         html += `
+</div>
+
+<div class="container">
 <div class="text-center">
     <div><img src="${iconUrl}"</div>
-    <div>${dayOfWeek}</div>
-    <div><h1>${data.list[i].main.temp} &#x2109;</h1></div>
+    <div><h2>${dayOfWeek}</h2></div>
+    <div><h3>${data.list[i].main.temp} &#x2109;</h3></div>
     <div><p>${data.list[0].weather[0].description}</p></div>
     <div>${data.list[i].main.humidity}% Humidity</div>
     </div>
+    </div>
     `
+
     }
     return html
 }
