@@ -56,6 +56,7 @@ function fiveDay(coords) {
         });
 }
 
+
 <!-- Weather Info in 5-Day Forecast -->
 function makeHTML(data) {
     let html = `
@@ -68,7 +69,7 @@ function makeHTML(data) {
         const humidity = `${data.list[i].main.humidity}%`;
         const dayOfWeek = new Date(data.list[i].dt * 1000).toLocaleDateString('en-US', {weekday: 'long'});
         html += `
-<div class="text-center" style="width: 25rem">
+<div class="text-center">
     <div><img src="${iconUrl}"</div>
     <div>${dayOfWeek}</div>
     <div>Temperature: ${data.list[i].main.temp} &#x2109;</div>
